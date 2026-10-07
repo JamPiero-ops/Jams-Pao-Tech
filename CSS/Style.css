@@ -1,0 +1,1357 @@
+/* =========================================================
+   JAM'SPAOTECH
+   HOJA DE ESTILOS PRINCIPAL
+========================================================= */
+
+
+/* =========================================================
+   1. VARIABLES GENERALES
+========================================================= */
+
+:root {
+    --azul-oscuro: #071b33;
+    --azul-principal: #0b2d50;
+    --azul: #0878d1;
+    --azul-claro: #eaf5ff;
+
+    --verde: #08a66a;
+    --verde-oscuro: #078957;
+
+    --gris-texto: #4d5a68;
+    --gris-claro: #f5f8fb;
+    --gris-borde: #dce5ed;
+
+    --blanco: #ffffff;
+    --negro: #172333;
+
+    --amarillo: #f4c95d;
+    --morado: #7654d6;
+
+    --sombra: 0 3px 12px rgba(7, 27, 51, 0.10);
+    --sombra-hover: 0 7px 20px rgba(7, 27, 51, 0.16);
+
+    --radio: 6px;
+}
+
+
+/* =========================================================
+   2. CONFIGURACIÓN GENERAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--negro);
+    background-color: var(--blanco);
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   3. NAVBAR
+========================================================= */
+
+.navbar-jam {
+    background-color: var(--azul-oscuro);
+    min-height: 64px;
+    padding: 7px 0;
+}
+
+.navbar-jam .container {
+    max-width: 1200px;
+}
+
+
+/* Logo */
+
+.navbar-brand {
+    color: var(--blanco) !important;
+    margin-right: 25px;
+}
+
+.logo-icon {
+    width: 38px;
+    height: 38px;
+
+    background-color: var(--blanco);
+    color: var(--azul-oscuro);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 4px;
+    margin-right: 8px;
+
+    font-size: 20px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+}
+
+.logo-name {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.logo-text small {
+    font-size: 9px;
+    font-weight: 400;
+    margin-top: 3px;
+    opacity: 0.85;
+}
+
+
+/* Enlaces */
+
+.navbar-jam .nav-link {
+    color: rgba(255, 255, 255, 0.90) !important;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    padding: 8px 11px !important;
+
+    transition: 0.25s ease;
+}
+
+.navbar-jam .nav-link:hover {
+    color: var(--blanco) !important;
+}
+
+
+/* Botón registro */
+
+.btn-registro-nav {
+    background-color: var(--verde);
+    color: var(--blanco);
+
+    border: none;
+    border-radius: 4px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    padding: 9px 16px;
+
+    transition: 0.25s ease;
+}
+
+.btn-registro-nav:hover {
+    background-color: var(--verde-oscuro);
+    color: var(--blanco);
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   4. HERO
+========================================================= */
+
+.hero-section {
+    background-color: #eef7fd;
+    overflow: hidden;
+}
+
+.hero-section .container {
+    max-width: 1200px;
+}
+
+.hero-content {
+    padding: 45px 35px 45px 20px;
+}
+
+.hero-subtitle {
+    color: var(--azul);
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.hero-content h1 {
+    color: var(--azul-oscuro);
+
+    font-size: clamp(30px, 4vw, 45px);
+    font-weight: 700;
+
+    line-height: 1.12;
+
+    margin-bottom: 15px;
+}
+
+.hero-content h1 span {
+    display: block;
+}
+
+.hero-description {
+    color: var(--gris-texto);
+
+    font-size: 13px;
+    line-height: 1.6;
+
+    max-width: 480px;
+
+    margin-bottom: 22px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.btn-hero {
+    background-color: var(--azul);
+    border-color: var(--azul);
+
+    font-size: 11px;
+    font-weight: 600;
+
+    padding: 9px 15px;
+
+    border-radius: 4px;
+}
+
+.btn-hero:hover {
+    background-color: #0669b8;
+    border-color: #0669b8;
+}
+
+.btn-hero-secondary {
+    background-color: transparent;
+
+    color: var(--azul-oscuro);
+
+    border-color: #9caaba;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    padding: 9px 15px;
+
+    border-radius: 4px;
+}
+
+.btn-hero-secondary:hover {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+}
+
+
+/* ==========================================
+   IMAGEN DEL HERO
+   ========================================== */
+
+.hero-image-container {
+    height: 100%;
+    min-height: 275px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Imagen principal */
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    min-height: 275px;
+    object-fit: cover;
+    object-position: 60% center;
+    display: block;
+}
+
+
+/* Desvanecido entre el texto y la imagen */
+
+.hero-image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32%;
+    height: 100%;
+
+    background: linear-gradient(
+        to right,
+        var(--azul-claro) 0%,
+        rgba(239, 248, 255, 0.90) 20%,
+        rgba(239, 248, 255, 0.55) 45%,
+        rgba(239, 248, 255, 0) 100%
+    );
+
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* =========================================================
+   5. TÍTULOS DE SECCIONES
+========================================================= */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.section-title h2 {
+    position: relative;
+
+    display: inline-block;
+
+    color: var(--azul-oscuro);
+
+    font-size: 21px;
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+.section-title h2::after {
+    content: "";
+
+    display: block;
+
+    width: 45px;
+    height: 3px;
+
+    background-color: var(--azul);
+
+    margin: 7px auto 0;
+
+    border-radius: 5px;
+}
+
+.section-title p {
+    color: var(--gris-texto);
+
+    font-size: 12px;
+
+    max-width: 620px;
+
+    margin: 8px auto 0;
+}
+
+
+/* =========================================================
+   6. NOSOTROS
+========================================================= */
+
+.section-nosotros {
+    padding: 28px 0 4px;
+    background-color: var(--blanco);
+}
+
+
+/* =========================================================
+   7. BENEFICIOS
+========================================================= */
+
+.beneficios-section {
+    padding: 5px 0 28px;
+    background-color: var(--blanco);
+}
+
+
+/*
+   GRID
+   Aquí utilizamos CSS Grid como solicita el trabajo.
+*/
+
+.beneficios-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    max-width: 950px;
+
+    margin: 0 auto;
+}
+
+.beneficio-card {
+    text-align: center;
+
+    padding: 5px 10px;
+}
+
+.beneficio-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto 10px;
+
+    font-size: 19px;
+}
+
+.icon-blue {
+    background-color: #e4f2ff;
+    color: #1683d7;
+}
+
+.icon-green {
+    background-color: #e2f7ed;
+    color: #13a36d;
+}
+
+.icon-yellow {
+    background-color: #fff4d8;
+    color: #d9a629;
+}
+
+.icon-purple {
+    background-color: #eee8ff;
+    color: var(--morado);
+}
+
+.beneficio-card h3 {
+    color: var(--azul-oscuro);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+.beneficio-card p {
+    color: var(--gris-texto);
+
+    font-size: 10px;
+
+    max-width: 160px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   8. PROGRAMAS
+========================================================= */
+
+.programas-section {
+    background-color: var(--gris-claro);
+
+    padding: 30px 0 40px;
+}
+
+.programas-section .container {
+    max-width: 1200px;
+}
+
+
+/*
+   CONTENEDOR DE CARRERAS
+
+   Usamos CSS Grid.
+   En escritorio aparecen 3 tarjetas por fila.
+*/
+
+.carreras-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+/* =========================================================
+   9. TARJETAS DE CARRERAS
+========================================================= */
+
+.carrera-card {
+    background-color: var(--blanco);
+
+    border: 1px solid var(--gris-borde);
+
+    border-radius: var(--radio);
+
+    overflow: hidden;
+
+    box-shadow: var(--sombra);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.carrera-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-hover);
+}
+
+
+/* Imagen */
+
+.carrera-card-image {
+    width: 100%;
+    height: 135px;
+
+    object-fit: cover;
+
+    background-color: #e8eef4;
+}
+
+
+/* Contenido */
+
+.carrera-card-body {
+    padding: 12px;
+}
+
+.carrera-card h3 {
+    color: var(--azul-oscuro);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    margin-bottom: 6px;
+}
+
+.carrera-card p {
+    color: var(--gris-texto);
+
+    font-size: 10px;
+    line-height: 1.5;
+
+    margin-bottom: 10px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+}
+
+.btn-mas-info {
+    display: inline-block;
+
+    background-color: var(--azul);
+
+    color: var(--blanco);
+
+    border: none;
+    border-radius: 3px;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    padding: 6px 10px;
+
+    transition: 0.2s ease;
+}
+
+.btn-mas-info:hover {
+    background-color: #0669b8;
+    color: var(--blanco);
+}
+
+
+/* =========================================================
+   10. MENSAJE DE CARGA
+========================================================= */
+
+.mensaje-cargando {
+    grid-column: 1 / -1;
+
+    min-height: 200px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    color: var(--gris-texto);
+
+    text-align: center;
+}
+
+.mensaje-cargando .spinner-border {
+    color: var(--azul);
+
+    width: 30px;
+    height: 30px;
+
+    margin-bottom: 10px;
+}
+
+.mensaje-cargando p {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   11. FORMULARIO DE REGISTRO
+========================================================= */
+
+.registro-card {
+    background-color: #edf7fd;
+
+    border: 1px solid #d9e9f3;
+
+    border-radius: 7px;
+
+    padding: 17px;
+
+    box-shadow: var(--sombra);
+
+    position: sticky;
+    top: 15px;
+}
+
+.registro-header h2 {
+    color: var(--azul-oscuro);
+
+    font-size: 16px;
+    font-weight: 700;
+
+    margin-bottom: 6px;
+}
+
+.registro-header p {
+    color: var(--gris-texto);
+
+    font-size: 9px;
+    line-height: 1.45;
+
+    margin-bottom: 15px;
+}
+
+
+/* Labels */
+
+.registro-card .form-label {
+    color: var(--azul-oscuro);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    margin-bottom: 4px;
+}
+
+
+/* Inputs */
+
+.registro-card .form-control,
+.registro-card .form-select {
+    width: 100%;
+
+    min-height: 31px;
+
+    font-size: 9px;
+
+    border: 1px solid #d5e0e8;
+
+    border-radius: 3px;
+
+    padding: 6px 8px;
+
+    background-color: var(--blanco);
+}
+
+.registro-card .form-control::placeholder {
+    color: #9ba8b4;
+}
+
+.registro-card .form-control:focus,
+.registro-card .form-select:focus {
+    border-color: var(--azul);
+
+    box-shadow: 0 0 0 2px rgba(8, 120, 209, 0.10);
+}
+
+
+/* Checkbox */
+
+.registro-card .form-check {
+    padding-left: 22px;
+}
+
+.registro-card .form-check-input {
+    width: 13px;
+    height: 13px;
+
+    margin-left: -22px;
+
+    margin-top: 2px;
+}
+
+.registro-card .form-check-input:checked {
+    background-color: var(--verde);
+    border-color: var(--verde);
+}
+
+.registro-card .form-check-label {
+    color: var(--gris-texto);
+
+    font-size: 8px;
+
+    line-height: 1.35;
+}
+
+.registro-card .form-check-label a {
+    color: var(--azul);
+
+    font-weight: 600;
+}
+
+
+/* Botón enviar */
+
+.btn-enviar {
+    width: 100%;
+
+    background-color: var(--verde);
+    border-color: var(--verde);
+
+    color: var(--blanco);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    padding: 8px;
+
+    border-radius: 3px;
+
+    transition: 0.2s ease;
+}
+
+.btn-enviar:hover {
+    background-color: var(--verde-oscuro);
+    border-color: var(--verde-oscuro);
+
+    color: var(--blanco);
+}
+
+
+/* =========================================================
+   12. MENSAJES DEL FORMULARIO
+========================================================= */
+
+#mensajeFormulario {
+    font-size: 9px;
+
+    padding: 8px;
+
+    margin-bottom: 10px;
+}
+
+#mensajeFormulario.alert-success {
+    color: #08734d;
+    background-color: #e3f7ee;
+    border-color: #bce8d5;
+}
+
+#mensajeFormulario.alert-danger {
+    color: #9c2525;
+    background-color: #fdeaea;
+    border-color: #f3c4c4;
+}
+
+
+/* =========================================================
+   13. CONTACTO
+========================================================= */
+
+.contacto-section {
+    background-color: var(--blanco);
+
+    padding: 35px 0;
+}
+
+.contacto-content {
+    background-color: var(--azul-oscuro);
+
+    border-radius: 7px;
+
+    padding: 25px 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.contacto-label {
+    color: #65baf5;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    margin-bottom: 5px;
+}
+
+.contacto-content h2 {
+    color: var(--blanco);
+
+    font-size: 20px;
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+.contacto-content p:not(.contacto-label) {
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 11px;
+
+    max-width: 600px;
+
+    margin-bottom: 0;
+}
+
+.btn-contacto {
+    background-color: var(--verde);
+
+    color: var(--blanco);
+
+    border: none;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    padding: 9px 15px;
+
+    border-radius: 4px;
+}
+
+.btn-contacto:hover {
+    background-color: var(--verde-oscuro);
+
+    color: var(--blanco);
+}
+
+
+/* =========================================================
+   14. FOOTER
+========================================================= */
+
+.footer-jam {
+    background-color: var(--azul-oscuro);
+
+    color: var(--blanco);
+
+    padding: 30px 0 0;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+.footer-logo .logo-icon {
+    width: 34px;
+    height: 34px;
+
+    font-size: 17px;
+}
+
+.footer-logo .logo-name {
+    font-size: 14px;
+}
+
+.footer-logo .logo-text small {
+    font-size: 8px;
+}
+
+.footer-description {
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 9px;
+    line-height: 1.55;
+
+    max-width: 270px;
+
+    margin-bottom: 12px;
+}
+
+
+/* Redes sociales */
+
+.social-icons {
+    display: flex;
+    gap: 7px;
+}
+
+.social-icons a {
+    width: 25px;
+    height: 25px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--blanco);
+
+    font-size: 11px;
+
+    transition: 0.2s ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--azul);
+
+    border-color: var(--azul);
+}
+
+
+/* Títulos */
+
+.footer-jam h3 {
+    color: var(--blanco);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    margin-bottom: 12px;
+}
+
+
+/* Enlaces */
+
+.footer-links,
+.footer-contact {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.62);
+
+    font-size: 9px;
+
+    transition: 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--blanco);
+}
+
+
+/* Contacto */
+
+.footer-contact li {
+    display: flex;
+
+    gap: 7px;
+
+    margin-bottom: 7px;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 8px;
+
+    line-height: 1.4;
+}
+
+.footer-contact i {
+    color: #68bdf4;
+
+    flex-shrink: 0;
+}
+
+
+/* Newsletter */
+
+.footer-jam .col-md-3 > p {
+    color: rgba(255, 255, 255, 0.60);
+
+    font-size: 9px;
+
+    margin-bottom: 9px;
+}
+
+.newsletter-form {
+    display: flex;
+
+    width: 100%;
+}
+
+.newsletter-form input {
+    min-width: 0;
+
+    flex: 1;
+
+    border: none;
+    outline: none;
+
+    padding: 7px;
+
+    font-size: 8px;
+
+    border-radius: 3px 0 0 3px;
+}
+
+.newsletter-form button {
+    border: none;
+
+    background-color: var(--azul);
+
+    color: var(--blanco);
+
+    padding: 0 9px;
+
+    font-size: 8px;
+    font-weight: 600;
+
+    border-radius: 0 3px 3px 0;
+
+    cursor: pointer;
+}
+
+
+/* Copyright */
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+    margin-top: 25px;
+
+    padding: 12px 0;
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 8px;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   15. FLEXBOX
+========================================================= */
+
+/*
+   Esta sección utiliza Flexbox para demostrar
+   su aplicación dentro del proyecto.
+*/
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.contacto-content {
+    display: flex;
+    align-items: center;
+}
+
+
+/* =========================================================
+   16. TABLETS
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .navbar-jam .navbar-collapse {
+        background-color: var(--azul-oscuro);
+
+        padding: 12px 0;
+    }
+
+    .navbar-jam .nav-link {
+        padding: 8px 5px !important;
+    }
+
+    .btn-registro-nav {
+        display: inline-block;
+    }
+
+
+    /* Hero */
+
+    .hero-content {
+        padding: 40px 25px;
+    }
+
+    .hero-image-container {
+        min-height: 300px;
+    }
+
+    .hero-image {
+        min-height: 300px;
+    }
+
+
+    /* Beneficios */
+
+    .beneficios-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        max-width: 600px;
+    }
+
+
+    /* Programas */
+
+    .carreras-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* Formulario */
+
+    .registro-card {
+        position: static;
+    }
+
+}
+
+
+/* =========================================================
+   17. CELULARES
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .navbar-jam {
+        min-height: 58px;
+    }
+
+    .navbar-brand {
+        margin-right: 0;
+    }
+
+    .logo-name {
+        font-size: 14px;
+    }
+
+
+    /* Hero */
+
+    .hero-content {
+        padding: 35px 20px 25px;
+
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image-container,
+    .hero-image {
+        min-height: 230px;
+    }
+
+
+    /* Secciones */
+
+    .section-title h2 {
+        font-size: 19px;
+    }
+
+
+    /* Beneficios */
+
+    .beneficios-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px 10px;
+    }
+
+
+    /* Programas */
+
+    .programas-section {
+        padding: 28px 0;
+    }
+
+    .carreras-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .carrera-card-image {
+        height: 180px;
+    }
+
+
+    /* Contacto */
+
+    .contacto-content {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 25px 20px;
+    }
+
+
+    /* Footer */
+
+    .footer-jam {
+        text-align: center;
+    }
+
+    .footer-logo {
+        justify-content: center;
+    }
+
+    .footer-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-contact li {
+        justify-content: center;
+    }
+
+    .newsletter-form {
+        max-width: 320px;
+
+        margin: 0 auto;
+    }
+
+}
+
+
+/* =========================================================
+   18. CELULARES PEQUEÑOS
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero-content h1 {
+        font-size: 27px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .btn-hero,
+    .btn-hero-secondary {
+        width: 100%;
+    }
+
+
+    .beneficios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .beneficio-card {
+        max-width: 250px;
+
+        margin: 0 auto;
+    }
+
+
+    .registro-card {
+        padding: 15px;
+    }
+
+    .carrera-card-image {
+        height: 170px;
+    }
+
+}
+
+
+/* =========================================================
+   19. ACCESIBILIDAD
+========================================================= */
+
+:focus-visible {
+    outline: 3px solid rgba(8, 120, 209, 0.40);
+
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   20. ANIMACIÓN SUAVE
+========================================================= */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.carrera-card {
+    animation: aparecer 0.4s ease both;
+}
